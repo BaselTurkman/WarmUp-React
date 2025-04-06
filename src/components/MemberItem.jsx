@@ -11,13 +11,13 @@ export default function MemberItem({ member, handleToggle }) {
     <ListItem key={member.name} disablePadding>
       <ListItemButton onClick={handleToggle(member)}>
         <PersonIcon sx={{ marginRight: 2 }} />
+        <ListItemText primary={member.name} />
         <Checkbox
           edge="start"
           checked={member.checked}
           tabIndex={-1}
           disableRipple
         />
-        <ListItemText primary={member.name} />
       </ListItemButton>
     </ListItem>
   );
