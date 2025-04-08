@@ -4,8 +4,8 @@ import MemberItem from "./MemberItem";
 export default function MemberList({ members, handleToggle }) {
   return (
     <List>
-      {members.map((member) => (
-        <MemberItem member={member} handleToggle={handleToggle} />
+      {members.map((member, index) => (
+        <MemberItem key={index} member={member} handleToggle={handleToggle} />
       ))}
     </List>
   );
